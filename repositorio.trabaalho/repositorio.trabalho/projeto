@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class Principal {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Entrada de dados do aluno
+        System.out.print("Digite o nome do aluno: ");
+        String nome = scanner.nextLine();
+
+        System.out.print("Digite o CPF do aluno: ");
+        String cpf = scanner.nextLine();
+
+        System.out.print("Digite o número de celular do aluno: ");
+        String celular = scanner.nextLine();
+
+        System.out.print("Digite o e-mail do aluno: ");
+        String email = scanner.nextLine();
+
+        System.out.print("Digite o nome dos pais do aluno: ");
+        String nomeDosPais = scanner.nextLine();
+
+        System.out.print("Digite a localização da residência do aluno: ");
+        String localizacao = scanner.nextLine();
+
+        // Criando o objeto aluno
+        Aluno aluno = new Aluno(nome, cpf, celular, email, nomeDosPais, localizacao);
+
+        // Exibindo os dados do aluno
+        System.out.println("\nInformações do Aluno:");
+        System.out.println(aluno);
+
+        scanner.close();
+    }
+}
+
