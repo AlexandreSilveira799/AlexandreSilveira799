@@ -1,1 +1,16 @@
+public class CadastroClientes {
+    // ... (demais métodos iguais)
+
+    public void adicionarCliente(String nome, String email, String telefone) {
+        for (Cliente cliente : clientes) {
+            if (cliente.getEmail().equalsIgnoreCase(email)) {
+                System.out.println("Erro: Já existe um cliente com esse email!");
+                return;
+            }
+        }
+        Cliente cliente = new Cliente(nome, email, telefone);
+        clientes.add(cliente);
+        System.out.println("Cliente cadastrado com sucesso!");
+    }
+}
 
