@@ -1,36 +1,29 @@
-import java.util.Scanner;
+// Classe Cliente
+public class Cliente {
+    private String nome;
+    private String email;
+    private String telefone;
 
-public class Principal {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+    public Cliente(String nome, String email, String telefone) {
+        this.nome = nome;
+        this.email = email;
+        this.telefone = telefone;
+    }
 
-        // Entrada de dados do aluno
-        System.out.print("Digite o nome do aluno: ");
-        String nome = scanner.nextLine();
+    public String getNome() {
+        return nome;
+    }
 
-        System.out.print("Digite o CPF do aluno: ");
-        String cpf = scanner.nextLine();
+    public String getEmail() {
+        return email;
+    }
 
-        System.out.print("Digite o número de celular do aluno: ");
-        String celular = scanner.nextLine();
+    public String getTelefone() {
+        return telefone;
+    }
 
-        System.out.print("Digite o e-mail do aluno: ");
-        String email = scanner.nextLine();
-
-        System.out.print("Digite o nome dos pais do aluno: ");
-        String nomeDosPais = scanner.nextLine();
-
-        System.out.print("Digite a localização da residência do aluno: ");
-        String localizacao = scanner.nextLine();
-
-        // Criando o objeto aluno
-        Aluno aluno = new Aluno(nome, cpf, celular, email, nomeDosPais, localizacao);
-
-        // Exibindo os dados do aluno
-        System.out.println("\nInformações do Aluno:");
-        System.out.println(aluno);
-
-        scanner.close();
+    @Override
+    public String toString() {
+        return "Nome: " + nome + ", Email: " + email + ", Telefone: " + telefone;
     }
 }
-
